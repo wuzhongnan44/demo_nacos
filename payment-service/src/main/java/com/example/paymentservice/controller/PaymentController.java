@@ -20,6 +20,7 @@ public class PaymentController {
     private int sleep;
     @Value("${stay}")
     private int stay;
+    private int c;
 
     final static Map<Integer, Balance> balanceMap = new HashMap() {
         {
