@@ -8,19 +8,19 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 
 @Configuration
 public class RedisTemplate {
-    @Bean
-    public RedisTemplate redisTemplate(@Value("${spring.redis.host}",@Value("${spring.redis.port}"))){
-        org.springframework.data.redis.core.RedisTemplate redisTemplate=new org.springframework.data.redis.core.RedisTemplate();
-        StringRedisSerializer stringRedisSerializer = new StringRedisSerializer();
-        Jackson2JsonRedisSerializer<Object> jackson2JsonRedisSerializer = new Jackson2JsonRedisSerializer<>(Object.class);
-        redisTemplate.setKeySerializer(stringRedisSerializer);
-        redisTemplate.setHashKeySerializer(stringRedisSerializer);
-        redisTemplate.setHashValueSerializer(jackson2JsonRedisSerializer);
-        redisTemplate.setValueSerializer(jackson2JsonRedisSerializer);
-        
-
-
-
-        return redisTemplate
-    }
+//    public org.springframework.data.redis.core.RedisTemplate redisTemplate(@Value("${spring.redis.host}"),@Value("${spring.redis.port}")){
+//        org.springframework.data.redis.core.RedisTemplate redisTemplate=new org.springframework.data.redis.core.RedisTemplate();
+//        StringRedisSerializer stringRedisSerializer = new StringRedisSerializer();
+//        Jackson2JsonRedisSerializer<Object> jackson2JsonRedisSerializer = new Jackson2JsonRedisSerializer<>(Object.class);
+//        redisTemplate.setKeySerializer(stringRedisSerializer);
+//        redisTemplate.setHashKeySerializer(stringRedisSerializer);
+//        redisTemplate.setHashValueSerializer(jackson2JsonRedisSerializer);
+//
+//
+//
+//
+//
+//
+//        return redisTemplate;
+//    }
 }
