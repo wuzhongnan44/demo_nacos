@@ -4,6 +4,9 @@ package com.example.accountservice.service;
 import com.example.accountservice.pojo.Balance;
 import org.springframework.stereotype.Component;
 
+/**
+ * @author Administrator
+ */
 @Component
 public class BalanceServiceFallback implements BalanceService {
 

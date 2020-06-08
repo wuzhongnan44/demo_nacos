@@ -13,11 +13,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestController
-@RefreshScope
+
 public class PaymentController {
 
     @Value("${sleep:0}")
     private int sleep;
+    @Value("${stay}")
+    private int stay;
 
     final static Map<Integer, Balance> balanceMap = new HashMap() {
         {
@@ -29,9 +31,9 @@ public class PaymentController {
 
 
     @RequestMapping("/pay/balance")
-    @SentinelResource(value = "protected-resource",blockHandler = "handleBlock")
-    public Balance getBalance(Integer id) {
-        System.out.println("request: /pay/balance?id=" + id + ", sleep: " + sleep);
+    @SentinelResource(value = "protected-resource", blockHandler = "handleBlock")
+    public Balance getBalance1(Integer id) {
+        System.out.println("request: /pay/balance?id=" + id + ", sleep: " + sleep + "stay：" + stay);
         if (sleep > 0) {
             try {
                 Thread.sleep(sleep);
