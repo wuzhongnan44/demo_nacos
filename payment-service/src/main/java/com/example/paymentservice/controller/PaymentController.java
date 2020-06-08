@@ -21,8 +21,6 @@ public class PaymentController {
     @Value("${stay}")
     private int stay;
 
-    private int a;
-
     final static Map<Integer, Balance> balanceMap = new HashMap() {
         {
             put(1, new Balance(1, 10, 1000));
