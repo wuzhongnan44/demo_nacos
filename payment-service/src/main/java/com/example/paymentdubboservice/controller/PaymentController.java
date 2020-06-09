@@ -28,11 +28,16 @@ public class PaymentController {
         }
     };
 
-
+    /**
+     * @
+     * @param id
+     * @return
+     */
     @RequestMapping("/pay/balance")
     @SentinelResource(value = "protected-resource", blockHandler = "handleBlock")
     public Balance getBalance1(Integer id) {
         System.out.println("request: /pay/balance?id=" + id + ", sleep: " + sleep + "stay：" + stay);
+        long l = System.currentTimeMillis();
         if (sleep > 0) {
             try {
                 Thread.sleep(sleep);
