@@ -1,5 +1,6 @@
 package com.example.dubbo.pojo;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 
 import java.io.Serializable;

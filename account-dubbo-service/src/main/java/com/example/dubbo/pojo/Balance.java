@@ -3,7 +3,7 @@ package com.example.dubbo.pojo;
 import lombok.Data;
 
 import java.io.Serializable;
-
+@Data
 public class Balance implements Serializable {
     private int id;
     private int diamond;
