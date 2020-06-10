@@ -1,14 +1,16 @@
 package com.example.dubbo.controller;
 
 import com.example.dubbo.pojo.User;
+import com.example.dubbo.pojo.UserJson;
 import com.example.dubbo.service.BalanceService;
 import org.apache.dubbo.config.annotation.Reference;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
+
 @RestController
 public class AccountController {
 
@@ -24,12 +26,34 @@ public class AccountController {
     private BalanceService balanceService;
 
     @RequestMapping("/acc/user")
-    public User getUser(@RequestParam Integer id) {
+    public UserJson getUser(@RequestBody User user) {
+        int id = Integer.valueOf(user.getId());
+        if (userMap.containsKey(id)) {
+            User user2 = userMap.get(id);
+            user2.setBalance(balanceService.getBalance(id));
+            User user1 = userMap.get(2);
+
+            List<User> users = Arrays.asList(new User[]{user2, user1});
+            return new UserJson("0",users);
+        }
+        User[] users=new User[]{new User(0,"")};
+        List<User> users1 = Arrays.asList(users);
+        return new UserJson("0",users1);
+
+    }
+    @RequestMapping("/acc/user1")
+    public List<User> getUserByMap(@RequestBody HashMap map) {
+        Integer id = (Integer) map.get("id");
         if (id != null && userMap.containsKey(id)) {
             User user = userMap.get(id);
             user.setBalance(balanceService.getBalance(id));
-            return user;
+            User user1 = userMap.get(2);
+
+            return Arrays.asList(new User[]{user,user1});
         }
-        return new User(0, "");
+        User[] users=new User[]{new User(0,"")};
+        List<User> users1 = Arrays.asList(users);
+        return users1;
+
     }
 }
