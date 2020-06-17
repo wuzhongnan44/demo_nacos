@@ -1,4 +1,4 @@
-package com.example.accountdubboservice1.pojo;
+package com.example.accountdubboservice.pojo;
 
 import lombok.Data;
 

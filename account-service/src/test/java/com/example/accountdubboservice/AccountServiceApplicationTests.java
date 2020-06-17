@@ -1,4 +1,4 @@
-package com.example.accountdubboservice1;
+package com.example.accountdubboservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

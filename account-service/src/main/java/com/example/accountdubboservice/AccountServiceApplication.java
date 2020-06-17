@@ -1,4 +1,4 @@
-package com.example.accountdubboservice1;
+package com.example.accountdubboservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
