@@ -1,7 +1,7 @@
-package com.example.accountdubboservice.service;
+package com.example.accountdubboservice1.service;
 
 
-import com.example.accountdubboservice.pojo.Balance;
+import com.example.accountdubboservice1.pojo.Balance;
 import org.springframework.stereotype.Component;
 
 /**
