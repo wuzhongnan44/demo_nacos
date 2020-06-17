@@ -1,6 +1,6 @@
-package com.example.accountdubboservice.service;
+package com.example.accountdubboservice1.service;
 
-import com.example.accountdubboservice.pojo.Balance;
+import com.example.accountdubboservice1.pojo.Balance;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

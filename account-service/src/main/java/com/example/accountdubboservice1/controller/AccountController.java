@@ -1,7 +1,7 @@
-package com.example.accountdubboservice.controller;
+package com.example.accountdubboservice1.controller;
 
-import com.example.accountdubboservice.pojo.User;
-import com.example.accountdubboservice.service.BalanceService;
+import com.example.accountdubboservice1.pojo.User;
+import com.example.accountdubboservice1.service.BalanceService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
