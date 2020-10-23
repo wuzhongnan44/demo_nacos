@@ -26,7 +26,6 @@ public class AccountController {
     public User getUser(@RequestParam Integer id) {
         if(id != null && userMap.containsKey(id)) {
             User user = userMap.get(id);
-            user.setBalance(balanceService.getBalance(id));
              return user;
         }
         return new User(0, "");
