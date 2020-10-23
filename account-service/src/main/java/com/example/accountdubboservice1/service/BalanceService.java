@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 /**
  * @author Administrator
  */
-@FeignClient(name = "payment-service", fallback = BalanceServiceFallback.class)
+@FeignClient(name = "payment-service", fallback = com.example.accountdubboservice.service.BalanceServiceFallback.class)
 public interface BalanceService {
 
     @RequestMapping(value = "/pay/balance", method = RequestMethod.GET)

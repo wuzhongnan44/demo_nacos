@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
  * @author Administrator
  */
 @Component
-public class BalanceServiceFallback implements BalanceService {
+public class BalanceServiceFallback implements com.example.accountdubboservice.service.BalanceService {
 
 
     @Override
